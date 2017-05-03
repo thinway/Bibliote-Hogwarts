@@ -100,15 +100,21 @@ public abstract class ObraPrestamo extends Obra implements Prestable {
      */
     @Override
     public void devolucionPrestamo() {
+        // Tomamos la hora actual
         Date ahora = new Date();
+        // Calculo la diferencia en milisegundos entre la hora actual y la fecha en la que se realizó el préstamo.
         long difDias = ( ahora.getTime() - fechaPrestamo.getTime() ) / MILISEGUNDOS_DIA;
 
+        // Si la diferencia en días es superior, el libro está fuera de préstamo
         if( difDias > periodoPrestamo ){
-            System.out.println("Préstamo con retraso. Penalización.");
+            System.out.println("Préstamo con retraso (" + (difDias - periodoPrestamo) + " días). Penalización.");
         }
 
+        // Se informa de la devolución
         System.out.println("Entregado el " + getClass().getSimpleName() + " con título '" + title + "'.");
 
+        // El libro vuelve a estar disponible para préstamo
+        // Se pone la fecha a null
         fechaPrestamo = null;
         periodoPrestamo = 0;
     }
