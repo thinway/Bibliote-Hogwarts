@@ -8,7 +8,7 @@ public abstract class ObraRevisable extends Obra implements Revisable {
     /**
      * Sala donde será revisada la obra.
      */
-    protected String sala;
+    protected LugarHogwart sala;
 
     /**
      * Profesor que demanda la revisión.
@@ -34,7 +34,7 @@ public abstract class ObraRevisable extends Obra implements Revisable {
      * @param profesor Profesor que ha demandado la revisión.
      */
     @Override
-    public void solicitudRevision(String sala, String profesor) {
+    public void solicitudRevision(LugarHogwart sala, String profesor) {
         // Si la obra no se encuentra en ninguna sala
         if( this.sala == null ){
             // Se le adjudica la sala de revisión y el profesor demandante

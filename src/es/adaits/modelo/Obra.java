@@ -31,6 +31,7 @@ public abstract class Obra {
         }
     }
 
+
     public String getTitle() {
         return title;
     }
