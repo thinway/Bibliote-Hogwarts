@@ -6,6 +6,6 @@ package es.adaits.modelo;
  */
 public interface Revisable {
 
-    void solicitudRevision(LugarHogwart sala, String profesor);
+    void solicitudRevision(LugarHogwart sala, Profesor profesor);
     void finRevision();
 }

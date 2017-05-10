@@ -3,6 +3,7 @@ package es.adaits;
 import es.adaits.modelo.LugarHogwart;
 import es.adaits.modelo.Mapa;
 import es.adaits.modelo.Pergamino;
+import es.adaits.modelo.Profesor;
 
 import java.text.ParseException;
 
@@ -29,14 +30,14 @@ public class Main {
 
         // Revisión de un mapa
         Mapa mapa = new Mapa(5345, "Mapa de la Tierra Media",1550);
-        mapa.solicitudRevision(LugarHogwart.BIBLIOTECA, "Quirinus Quirrel");
+        mapa.solicitudRevision(LugarHogwart.BIBLIOTECA, Profesor.QUIRREL);
         System.out.println( mapa );
         mapa.finRevision();
         System.out.println( mapa );
 
         // Revisión de un Pergamino
         Pergamino pergamino = new Pergamino(456, "Sobre los magos y demonios", 1450);
-        pergamino.solicitudRevision(LugarHogwart.RAVENCLAW, "Remus Lupin");
+        pergamino.solicitudRevision(LugarHogwart.RAVENCLAW, Profesor.LUPIN);
         System.out.println( pergamino );
         pergamino.finRevision();
         System.out.println( pergamino );
